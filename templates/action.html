@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREEWORK User</title>
+    <link rel="shortcut icon" href="/static/image/logo_f.jpg " type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/action.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+
+      
+    <div class="list">
+        <header class="header">
+
+    <div class="dropdown">
+       
+        <button class="dropbtn"><a href="/it">Разработка и IT </a></button>
+        <div class="dropdown-content">
+          <a href="/copy">Копия сайтов</a>
+          <a href="#">Новый сайт</a>
+          <a href="#">Верстка по макету</a>
+        </div>
+        
+        </div>
+        <div class="dropdown2">
+        <button class="dropbtn2"><a href="/dizayn">Дизайн </a></button>
+        <div class="dropdown-content2">
+          <a href="#">Логотип</a>
+          <a href="#">Визитка</a>
+          <a href="#">Веб дизайн</a>
+            </div>
+        </div>
+        <div class="dropdown3">
+            <button class="dropbtn3"><a href="index2.html">Постаянная <br> работа</a></button>
+            {% comment %} <div class="dropdown-content3">
+              <a href="#">Instagram</a>
+              <a href="#">YouTube</a>
+              <a href="#">TikTok</a>
+          </div> {% endcomment %}
+        </div>
+        <div class="dropdown4">
+            <button class="dropbtn4"><a href="/action">Главное страница</a></button>
+            <div class="dropdown-content4">
+              <a href="/feedback">Глобальнный чат</a>
+              <a href="/about/">О нас</a>
+              <a href="#">Политика конфиденциальности</a>
+          </div>
+            </div>
+            
+        <img style="width: 200px;margin-left: -50px;margin-top: 60px;position: absolute; "class="lf" src="/static/image/logo_f-removebg.png" alt="">
+
+            <a href="/makeproject"><button class="create">Создать проэкт</button></a>
+            <a href="/account"><button class="akk">Аккаунт</button></a>
+        </header>
+        <div  id="earth-col">
+            <div style="width: 650px;height: 650px; display: block; position: absolute; margin-left: 1100px; margin-top: 50px; " id="element" ></div>
+         </div>
+            {% for data in dbdata %}
+            <div class="block" > 
+            
+                  
+                <div class="img">
+                  <img style="position: absolute;width: 250px;  height: 230px;    margin-left: 70px;    border-radius: 50%;    margin-top: 70px;    object-fit: cover;" class="imagess" src="/media/{{ data.photo }}" alt="">
+                </div>
+                    
+
+                <div style="margin-top:300px; position:absolute; margin-left:130px; background-color:#fff;" class="main_info" >
+                  <div class="myname">
+                    <h1 style="background-color:#fff"  class="titles">{{ data.name }} </h1>
+                  </div>               
+                  <p  style="background-color:#fff; text-align:center; " >Продавец</p>
+                </div>
+              </div>
+            {% endfor %}
+                <div class="choose">
+                  <a href="/action"><button>Фрилансер</button></a>
+                  <a href="/customer"><button>Покупатель</button></a>
+              </div>
+            <!-- <div class="news">
+              {% for dbdat in dbdats %}
+                <h1 style="background-color:#fff"  class="titles">{{ dbdat.titles }} </h1>
+                <img style="position: absolute;width: 250px;  height: 230px;    margin-left: 70px;    border-radius: 50%;    margin-top: 70px;    object-fit: cover;" class="imagess" src="/media/{{ dbdat.images }}" alt="">
+                
+              {% endfor %}
+            </div> -->
+   
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    </script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="{% static 'js/main.js'  %}"></script>
+    <script src="{% static 'js/countries.js' %}"></script>
+
+    <script src="{% static 'js/miniature.earth.js' %}"></script>
+</body>
+</html>

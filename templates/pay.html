@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копия сайтов</title><link rel="shortcut icon" href="/static/image/logo_f.jpg " type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/pay.css'%}">
+</head>
+<body>
+    <div class="list">
+        <header class="header">
+          
+<div class="submenu">
+
+    <div class="dropdown">
+        <button class="dropbtn"><a href="/it/">Разработка и IT </a></button>
+        <div class="dropdown-content">
+          <a href="copy">Копия сайтов</a>
+          <a href="#">Новый сайт</a>
+          <a href="#">Верстка по макету</a>
+        </div>
+        
+        </div>
+        <div class="dropdown2">
+        <button class="dropbtn2"><a href="/dizayn/">Дизайн </a></button>
+        <div class="dropdown-content2">
+          <a href="#">Логотип</a>
+          <a href="#">Визитка</a>
+          <a href="#">Веб дизайн</a>
+            </div>
+        </div>
+        <div class="dropdown3">
+            <button class="dropbtn3"><a href="index2.html">Соцсети</a></button>
+            <div class="dropdown-content3">
+              <a href="#">Instagram</a>
+              <a href="#">YouTube</a>
+              <a href="#">TikTok</a>
+          </div>
+          
+        </div>
+        <div class="dropdown4">
+            <button class="dropbtn4"><a href="/action/">Главное страница</a></button>
+            <div class="dropdown-content4">
+              <a href="/feedback/">Служба поддержки</a>
+              <a href="#">О нас</a>
+              <a href="#">Политика конфиденциальности</a>
+          </div>
+            </div>
+            <img style="width: 200px;margin-left: -50px;margin-top: 60px;position: absolute;"class="lf" src="/static/image/logo_f-removebg.png" alt="">
+            <a href="/account"><button class="akk">Аккаунт</button></a>
+        </div>
+        </header>
+
+                <form class="form" method="POST">
+                  {% csrf_token %}
+                  <h1 class="h1_pay">Оплата</h1>
+                    <input class="pay" type="text" name="pay" placeholder="Введите номер" >
+                    <input class="pay" type="text" name="py" placeholder="Введите сумму">
+                    <button class="submit" type="submit">Оплата</button>
+                </form>
+  
+    </div>
+</body>
+</html>

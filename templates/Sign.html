@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigh in</title>
+    <link rel="shortcut icon" href="/static/image/logo_f.jpg " type="image/x-icon">   
+    <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+</head>
+<body>
+
+  
+    <form class="form" method="POST">
+      {% csrf_token %}
+      
+      <h1 class="h1">Sign in</h1>
+     
+    <input id="email" class="email" type="email" name="email" placeholder="Enter email">
+    <input id="myInput" class="password" type="password" name="password" placeholder="Enter password">
+    <input class="checkbox" type="checkbox" onclick="myFunction()" >
+    <button class="button" type="submit"> Submit</button>
+    <a class="a" href="/register">You havn't account</a>
+    
+  </form>
+  {% if context %}
+  <span class="span">{{ info }}</span>
+{%  endif %}
+
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+</body>
+</html>

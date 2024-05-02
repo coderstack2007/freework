@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Служба поддержки </title>
+    <link rel="shortcut icon" href="/static/image/logo_f.jpg " type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/feedback.css'%}">
+</head>
+<body>
+    <div class="list">
+        <header class="header">
+          
+<div class="submenu">
+
+    <div class="dropdown">
+        <button class="dropbtn"><a class="a" href="/it">Разработка и IT </a></button>
+        <div class="dropdown-content">
+          <a href="/copy/">Копия сайтов</a>
+          <a href="/copy/">Новый сайт</a>
+          <a href="/copy/">Верстка по макету</a>
+        </div>
+        
+        </div>
+        <div class="dropdown2">
+        <button class="dropbtn2"><a class="a" href="/dizayn">Дизайн </a></button>
+        <div class="dropdown-content2">
+          <a href="/copy/">Логотип</a>
+          <a href="/copy/">Визитка</a>
+          <a href="/copy/">Веб дизайн</a>
+            </div>
+        </div>
+        <div class="dropdown3">
+            <button class="dropbtn3"><a class="a" href="index2.html">Соцсети</a></button>
+            <div class="dropdown-content3">
+              <a href="#">Instagram</a>
+              <a href="#">YouTube</a>
+              <a href="#">TikTok</a>
+          </div>
+          
+        </div>
+        <div class="dropdown4">
+            <button class="dropbtn4"><a class="a" href="/action">Главное страница</a></button>
+            <div class="dropdown-content4">
+              <a href="/feedback/">Служба поддержки</a>
+              <a href="/about/">О нас</a>
+              <a href="#">Политика конфиденциальности</a>
+          </div>
+            </div>
+          <img style="width: 200px;margin-left: -50px;margin-top: 60px;position: absolute;border-radius: 50%;height: 160px;"class="lf" src="/static/image/logo_f.jpg" alt="">
+
+        </div>
+        </header>
+ <div class="div">
+    {% for data in datadata %}
+    <p class="p">{{ data.message }}</p>  
+   
+    {% endfor %}
+          
+    <form class="form" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+       {{ from.as_table }}
+      <button class="send" type="submit">Send</button>
+  </form>
+    </div>
+
+
+   
+           
+</div>    
+</body>
+</html>

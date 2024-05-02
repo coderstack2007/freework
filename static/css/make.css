@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(/static/image/cosmos.jpg);
+    background-size: cover;
+}
+.list{
+
+    width: 900px;
+    margin: 0 500px;
+    height: 700px;
+}
+.lf{
+    width: 200px;
+    margin-left: -50px;
+    margin-top: 60px;
+    position: absolute;
+}
+.form{
+    margin: 0 20px;
+    margin-top: 70px;
+    margin-left: 200px;
+    
+}
+img{
+    border: none;
+}
+input{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: #000;
+    background-color: #fff;
+}
+.nick{
+    font-size: 30px;
+
+}
+.tel{
+    color: #000;
+    position: absolute
+}
+.about{
+    position: absolute;
+    margin-top: 100px;
+}
+textarea{
+    width: 500px;
+    margin-top: 100px;
+    border-radius: 10px;
+    border: none;
+    color: #000;
+}
+
+label, th{
+    display: none;
+}
+.submit{
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    height: 20px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+}
+.reg{
+    margin-left: 340px;
+    margin-top: 150px;
+}

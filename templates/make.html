@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="shortcut icon" href="/static/image/logo_f.jpg " type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/make.css' %}">
+    
+
+</head>
+<body>
+    
+<div class="list">
+    <h1 class="reg">Регистрация</h1>
+<form class="form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        <h1 class="nick">Имя</h1>
+        
+        {{ form.as_table }}
+
+        <h1 class="about">О вас</h1>
+    </table>
+    <button class="submit" type="submit">Регистрация</button>
+</form>
+
+
+</div>
+</body>
+</html>

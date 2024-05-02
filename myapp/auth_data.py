@@ -1,0 +1,2 @@
+token = '5940693524:AAFtR8UHRImvx8VCNxPxsgXCzE2UaCboEyI'
+chatId = '1805353005'
